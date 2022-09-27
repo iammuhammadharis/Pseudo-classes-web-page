@@ -1,0 +1,70 @@
+/* :nth-last-of-type() */
+
+span:nth-last-of-type(2) {
+  background-color: lime;
+}
+
+
+
+
+/*  */
+
+.box {
+  background: pink;
+  height: 80px;
+  width: 80px;
+}
+
+.box:empty {
+  background: lime;
+}
+
+
+
+/* :not() */
+
+
+.fancy {
+  text-shadow: 2px 2px 3px gold;
+}
+
+/* <p> elements that don't have a class `.fancy` */
+p:not(.fancy) {
+  color: green;
+}
+
+/* Elements that are not <p> elements */
+body :not(p) {
+  text-decoration: underline;
+}
+
+/* Elements that are not <div> and not <span> elements */
+body :not(div):not(span) {
+  font-weight: bold;
+}
+
+/* Elements that are not <div>s or `.fancy` */
+body :not(div, .fancy) {
+  text-decoration: overline underline;
+}
+
+/* Elements inside an <h2> that aren't a <span> with a class of `.foo` */
+h2 :not(span.foo) {
+  color: red;
+}
+
+
+
+
+/* :lang() */
+
+
+:lang(en) > q {
+  quotes: "\201C""\201D""\2018""\2019";
+}
+:lang(fr) > q {
+  quotes: "« " " »";
+}
+:lang(de) > q {
+  quotes: "»" "«" "\2039""\203A";
+}
